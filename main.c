@@ -7,13 +7,13 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n;
+int idade;
 
-printf("DIgite um numero: ");
-scanf("%d", &n);
+printf("DIgite a idade: ");
+scanf("%d", &idade);
 
-printf("Antecessor: %d\n", n- 1);
-printf("Sucessor; %d\n", n+ 1);
+printf("Equivale a %d meses\n", idade * 12);
+printf("Equivale a %d dias (aproximado)\n", idade * 365);
 
 
 
