@@ -7,14 +7,16 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float n1, n2, n3, media;
+float celsius, fahrenheit;
 
-printf("Digite tres notas:" );
-scanf("%f %f %f", &n1, &n2, &n3);
+printf("Digite a temperatura em Celsius: ");
+scanf("%f", &celsius);
 
-media = (n1 = n2 = n3) / 3;
+fahrenheit = (celsius * 9.0 / 5.0) + 32;
+printf("Fahrenheit: %.2f\n", fahrenheit);
 
-printf("medias: %.2f\n", media);
+
+    
 
 
 
