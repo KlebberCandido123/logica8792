@@ -15,8 +15,10 @@ scanf("%d", &n);
 
 if(n > 0) {
     printf("Positivo\n");
-        }else{
+        }else if(n < 0){
              printf("negativo\n");
+        }else{
+            printf("igual 0");
         }
    
 
