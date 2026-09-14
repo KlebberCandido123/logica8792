@@ -7,19 +7,21 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n;
+int idade;
 
 printf("Digite um numero: ");
-scanf("%d", &n);
+scanf("%d", &idade);
+
+if(idade >= 18){
+    printf("Voce e maior de idade!");
+}else{
+    printf("voce e menor de idade");
+}
 
 
- if(n % 2 == 0){
-    printf("\nPar");
- }else{
-    printf("\nImpar");
- }
 
-    
+ 
+
 
 
 
