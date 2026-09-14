@@ -7,24 +7,17 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int idade;
+int a, b, c, maior;
 
-printf("Digite um numero: ");
-scanf("%d", &idade);
+printf("Digite tres, numeros: ");
+scanf("%d %d %d", &a, &b, &c);
 
-if(idade >= 50){
-    printf("vc e senior");
+maior = a;
 
-}else if(idade >=  18){
-    printf("Maior de idade");
+if(b > maior) maior = b;
+if(c > maior) maior = c;
 
-}else if(idade >= 12){
-    printf("voce e adolecente");
-
-}else if(idade >= 9){
-    printf("voce e pre-adolecente");
-}else
-    printf("vc e criança");
+printf("Maior: %d", maior);
 
 
 
