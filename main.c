@@ -13,15 +13,7 @@ printf("Digite um numero: ");
 scanf("%d", &n);
 
 
-if(n > 0) {
-    printf("Positivo\n");
-        }else if(n < 0){
-             printf("negativo\n");
-        }else{
-            printf("igual 0");
-        }
-   
-
+ printf("%s", n > 0 ? "positivo" : (n < 0 ? "Negativo" : "Zero"));
 
 
     
