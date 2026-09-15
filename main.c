@@ -7,15 +7,17 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int a, b;
+int a, b, c;
 
 printf("digiite dois numeros:");
-scanf("%d %d", &a, &b);
+scanf("%d %d %d", &a, &b, &c);
 
-if(a == b){
-    printf("Os números são iguais!\n");
-}else{
+if((a != b) && (b != c)){
+    printf("Os tres numeros são diferentes!\n");
+}else if(b != c){
     printf("Os numeros são diferentes!\n");
+}else{
+    printf("todos os numeros são iguais ");
 }
 
 
