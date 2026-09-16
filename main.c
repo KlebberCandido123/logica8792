@@ -8,18 +8,21 @@ int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
 int idade;
-float altura;
+int ehEstudante;
 
-printf("Bem-vindos ao brinquedo roleta da morte!");
-printf("\nQual sua idade?");
+printf("Qual sua idade?");
 scanf("%d", &idade);
-printf("\nQual sua altura?");
-scanf("%f", &altura);
+printf("\nVoce é estudante (0 - Não | 1 - Sim):");
+scanf("%d", &ehEstudante);
 
-if((idade >= 18) && (altura >= 1,60)){
-    printf("Voce pode brincar na roleta!");
-}else
-    printf("voce nao pode brincar na roleta!");
+if((idade >= 60) && (ehEstudante == 1)){
+    printf("parabens voce tem direito a desconto!");
+
+}else{
+    printf("infelizmente voce não tera desconto!");
+}
+
+
 
 
 
