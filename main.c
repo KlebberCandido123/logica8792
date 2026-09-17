@@ -7,47 +7,44 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int  dia;
+float n1, n2, n3, media;
 
-printf("Digite um numero de (1 a 7): ");
-scanf("%d", &dia);
+printf("Digite a nota 1: ");
+scanf("%f", &n1);
 
-switch (dia){
-    case 1:
-       printf("Domingo!");
-       break;
-    case 2:
-        printf("Segunda-feira");
-        break;
-    case 3:
-        printf("Terça-feira");
-        break;
-    case 4:
-    printf("Quarta-feira");
-         break;
-    case 5: 
-         printf("Quinta-feira");
-           break;
-    case 6:
-         printf("Sexta-feira");
-         break;
-    case 7:
-        printf("Sabado");
-        break;
-       default:
-       printf("Numero invalido!!");
-       break;  
+printf("Digite uma nota 2: ");
+scanf("%f", &n2);
 
+printf("Digitw uma nota 3: ");
+scanf("%f", &n3);
 
+media = (n1 + n2 +n3) / 3;
 
-
-
-
-
-
-
-
+if(media >= 7){
+    printf("Aprovado");
+}else if(media >=5){
+    printf("recuperação");
+}else{
+    printf("Reprovado");
 }
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
 
 
 
