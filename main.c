@@ -7,14 +7,24 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float a, b, c;
-printf("Digite os tres lados do triangulo: ");
-scanf("%f %f %F", &a, &b, &c);
+int opcao;
 
-if( a + b > c && a + c > b && b + c > a){
-    printf("Os lados formam um triangulo!\n");
-}else{
-    printf("Os lados NÂO formam um triangulo!\n");
+printf("--- sistema d epedagio---\n");
+printf("1 - moto\n");
+printf("2 - carro passeio\n");
+scanf("%d", &opcao);
+
+switch (opcao)
+{
+    case 1:
+    printf("categoria: moto | tarifa: R$ 5,00\n");
+    break;
+    case 2:
+    printf("categoria: carro passeio | tarifa: R$ 10,00\n");
+    break;
+    default:
+    printf("Erro: Categoria não cadastrada no sistema.\n");
+    break;
 }
 
 
