@@ -11,12 +11,10 @@ float a, b, c;
 printf("Digite os tres lados do triangulo: ");
 scanf("%f %f %F", &a, &b, &c);
 
-if(a == b && b == c){
-    printf("Equilatero!\n");
-}else if(a == b || a == c || b == c){
-    printf("isosceles!\n");
+if( a + b > c && a + c > b && b + c > a){
+    printf("Os lados formam um triangulo!\n");
 }else{
-    printf("Escaleno!\n");
+    printf("Os lados NÂO formam um triangulo!\n");
 }
 
 
