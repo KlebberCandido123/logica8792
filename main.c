@@ -7,28 +7,9 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float peso, altura, imc;
-
-printf("Digite o peso (kg): ");
-scanf("%f", &peso);
-printf("Digite sua altura (m): ");
-scanf("%f", &altura);
-
-imc = peso / (altura * altura);
-
-if(imc < 18.5){
-    printf("Classificação: Abaixo do peso!\n");
-}else if(imc < 25){
-    printf("Classificação: peso normal!\n");
-}else if(imc < 30){
-    printf("Classificação: Sobrepeso!\n");
-}else{
-    printf("Classificação: Obesidade!\n");
+for(int i = 0; i < 10000; i++){
+    printf("%d\n", i);
 }
-
-
-
-
 
 
 
