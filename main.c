@@ -7,9 +7,12 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-for(int i = 0; i < 20; i ++){
-    printf("%s\n %d", "\nOs numeros estão aumentando: --->>" ,i);
-}
+char frutas[3] [20] ={"maça", "banana", "laranja"};
+
+printf("%s\n", frutas[0]);
+printf("%s\n", frutas[1]);
+printf("%s\n", frutas[2]);
+
 
 
 
