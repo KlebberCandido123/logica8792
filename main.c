@@ -4,18 +4,17 @@
 #include<string.h>
 
 
-void saudar(){
-    printf("Ola mundo!\n");
-    printf("Tenha um bom diaa!\n");
+void saudar(const char *nome){
+    printf("ola %s\n", nome);
 }
 
 int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-saudar();
 
-
+saudar("Klebber");
+saudar("vinicius");
 
 
 
