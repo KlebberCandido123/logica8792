@@ -11,11 +11,11 @@ setlocale(LC_ALL, "pt_BR.UTF-8");
 
 int numeros[] = {10, 20, 30};
 
-int lenght = sizeof(numeros) / sizeof(numeros[0]);
-
-
-printf("%d", lenght);
-
+int x = 10;
+int *p = &x;
+printf("valor de x: %d\n", x);
+printf("Endereço de x: %p\n");
+printf("valor via ponteiro: %d\n", *p);
 
 
 
