@@ -3,19 +3,19 @@
 #include<stdbool.h>
 #include<string.h>
 
+void dobrar(int *x){
+    *x =*x * 2;
+}
 
 int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
+int numero = 10;
+dobrar(&numero);
+printf("numero depois da função %d\n", numero);
 
-int numeros[] = {10, 20, 30};
 
-int x = 10;
-int *p = &x;
-printf("valor de x: %d\n", x);
-printf("Endereço de x: %p\n");
-printf("valor via ponteiro: %d\n", *p);
 
 
 
