@@ -8,11 +8,9 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int idades[3] = {25, 35, 45};
- 
-printf("%s %d %s", "Sasuke tem, ", idades[0], "anos!");
-printf("%s %d %s", "Naruto tem, ", idades[1], "anos!");
-printf("%s %d %s", "Boruto tem, ", idades[2], "anos!");
+for(int i = o; i <= 10; i = i + 2){
+    printf("%d\n", i);
+}
 
 
 
