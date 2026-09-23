@@ -5,18 +5,22 @@
 #include<math.h>
 
 
+int fatorial(int n){
+    int resultado = 1;
+    for(int i = 1; i <= n; i++){
+        resultado *= i;
+    }
+    return resultado;
+}
+
 
 int main(){
 
-setlocale(LC_ALL, "pt_BR.UTF-8");
+ setlocale(LC_ALL, "pt_BR.UTF-8");
 
+int numero = 5;
+printf("fatorial de %d = %d\n", numero, fatorial (numero));
 
-char nome[50];
-
-printf("Digite seu nome completo aqui: ");
-fgets(nome, sizeof(nome), stdin);
-
-printf("ola %s", nome);
 
 
 return 0; 
