@@ -12,7 +12,7 @@ int tabuada (int n){
         resultado = n * i;
         printf("%d x %d = %d\n", n, i, n * i);
     }
-    return resultado;
+    return 0;
 }
 
 
@@ -21,8 +21,11 @@ int main(){
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
 
-int ultimo = tabuada(7);
-printf("Ultimo valor da tabuada: %d\n", ultimo);
+int numero;
+printf("Digite um numero para ver a tabuada: ");
+scanf("%d", &numero);
+tabuada(numero);
+
 
 
 
