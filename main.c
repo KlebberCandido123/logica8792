@@ -2,7 +2,7 @@
 #include<locale.h>
 #include<stdbool.h>
 #include<string.h>
-
+#include<math.h>
 
 
 
@@ -10,15 +10,16 @@ int main(){
 
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-char nome[3][20] ={
-    "sasuke",
-    "naruto",
-    "kakashi"
-};
 
-for(int i = 0; i < 3; i++){
-    printf("%s\n", nome[i]);
-}
+int numero;
+printf("Digite um numero: ");
+scanf("%d", &numero);
+
+int quadrado = (int)pow(numero, 2 );
+int cubo = (int) pow (numero, 3);
+printf("quadrado de %d = %d\n", numero, quadrado);
+printf("cubo de %d + %d", numero, cubo);
+
 
 return 0; 
 
