@@ -4,15 +4,12 @@
 #include<string.h>
 #include<math.h>
 
-
-int tabuada (int n){
-    int resultado;
-    printf("tabuada do %d\n", n);
-    for(int i = 1; i <= 10; i++){
-        resultado = n * i;
-        printf("%d x %d = %d\n", n, i, n * i);
+void verificarEhParImpar(int n){
+    if(n % 2 == 0){
+        printf("%d e impar \n", n);
+    }else{
+        printf("%d e impar\n", n);
     }
-    return 0;
 }
 
 
@@ -20,11 +17,9 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
+verificarEhParImpar(10);
+verificarEhParImpar(7);
 
-int numero;
-printf("Digite um numero para ver a tabuada: ");
-scanf("%d", &numero);
-tabuada(numero);
 
 
 
