@@ -10,28 +10,17 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int opcao = -1;
-
-while(opcao != 0){
-    printf("\nMenu: \n");
-    printf("1 - Depositar\n");
-    printf("2 - Sacar\n");
-    printf("3 - Consutar\n");
-    printf("0 - Sair\n");
-    printf("Escolha: ");
-    scanf("%d", &opcao);
-
-
-
-    switch(opcao){
-        case 1: printf("voce escolheu Depositar\n"); break;
-        case 2: printf("vocce escolheu Sacar\n"); break;
-        case 3: printf("voce escolheu Consultar\n"); break;
-        case 0: printf("Saindo..."); break;
-        default: printf("opcao invalida\n");
+int i = 1;
+while(i <=50 ){
+    if(i % 2 == 0){
+        printf("%d\n", i);
     }
-  
+    i++;
+
+    
 }
+
+
 
 
 return 0; 
