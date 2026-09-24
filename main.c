@@ -10,16 +10,17 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
+ int numero;
+ printf("Digite um numero positivo: ");
+ scanf("%d", &numero);
 
-int contador = 10;
 
-while(contador >= 1){
-    printf("%d\n", contador);
-    contador--;
+while(numero <= 0){
+    printf("Numero invalido! Digite novamente: ");
+    scanf("%d", &numero);
 }
 
-
-
+printf("Numero valido: %d\n", numero);
 
 return 0; 
 
