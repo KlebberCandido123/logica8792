@@ -4,31 +4,22 @@
 #include<string.h>
 #include<math.h>
 
-
-void contarVogais(char palavra[]){
-    int contador = 0;
-    for(int i = 0; i <strlen(palavra); i++){
-        char c = palavra[i];
-        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
-        || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U'){
-            contador++;
-        }
+void maxMin(int v[], int tamanho){
+    int max = v[0], min = v[0];
+    for(int i = 1; i < tamanho; i++){
+        if(v[i] > max) max = v[i];
+        if(v[i] < min) min = v[i];
     }
-    printf("A palavra '%s' tem %d vogais.\n", palavra, contador);
+    printf("Maximo: %d, Minimo: %d\n", max, min);
 }
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-char p[20];
 
-printf("Digite uma palavra!: ");
-scanf("%s", p);
-
-contarVogais(p);
-
-
+int numeros[] = {4, 8, 2, 15, 6};
+maxMin(numeros, 5);
 
 
 return 0; 
