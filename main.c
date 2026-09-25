@@ -10,16 +10,18 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int i = 1;
-while(i <=50 ){
-    if(i % 2 == 0){
-        printf("%d\n", i);
-    }
-    i++;
+int n;
+long long fatorial = 1;
 
-    
+printf("digite um numero: ");
+scanf("%d", &n);
+
+for(int i = 1; i <= n; i++){
+    fatorial *= i;
 }
 
+
+printf("Fatorial: %lld\n", fatorial);
 
 
 
