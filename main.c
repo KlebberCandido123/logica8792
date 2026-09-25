@@ -6,26 +6,25 @@
 
 
 
-int ehPrimo(int n){
-    if(n < 2)return 0;
-    for(int i = 2; i < n; i++){
 
-    }
-    return 1;
- }
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
- int numero;
- printf("Digite um numero: ");
- scanf("%d", &numero);
- if(ehPrimo(numero))
- printf("%d e primo\n", numero);
- else
- printf("%d não e primo\n", numero);
-
+int n, soma = 0;
+printf("Digite um numero: ");
+scanf("%d", &n);
+for(int i = 1; i < n; i++){
+    if(n % i == 0){
+        soma += i;
+    }
+}
+if(soma == n){
+    printf("%d  e um numero perfeito\n", n);
+}else{
+    printf("%d não e um numero perfeito\n", n);
+}
 return 0; 
 
 }
