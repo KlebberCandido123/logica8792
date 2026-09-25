@@ -10,18 +10,14 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n;
-long long fatorial = 1;
+int n, tabuada;
 
-printf("digite um numero: ");
+printf("Digite um numero: ");
 scanf("%d", &n);
 
-for(int i = 1; i <= n; i++){
-    fatorial *= i;
+for(int i = 1; i<= 10; i++){
+    printf("%d\n", n  * i);
 }
-
-
-printf("Fatorial: %lld\n", fatorial);
 
 
 
