@@ -11,19 +11,57 @@
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
+int opcao;
+float a, b;
+do {
+    printf("\n---MENU---\n");
+    printf("1 - soma\n");
+    printf("2 - subtração\n");
+    printf("3 - mutiplicação\n");
+    printf("4 - divisão\n");
+    printf("0 - sair\n");
+    scanf("%d", &opcao);
 
- int n;
- float nota, soma = 0;
 
- printf("qunatos alunos tem a turma: ");
- scanf("%d", &n);
- for(int i = 0; i < n; i++){
-    printf("Digite a nota do aluno %d: \n", i + 1);
-    scanf("%f", &nota);
-    soma += nota;
- }
- 
-  printf("Media da turma: %.2f\n", soma / n);
+    switch(opcao){
+        case 1:
+        printf("Digite dois numeros: ");
+        scanf("%f %f", &a, &b);
+        printf("resiltado: %.2f\n", a + b);
+        break;
+
+         case 2:
+        printf("Digite dois numeros: ");
+        scanf("%f %f", &a, &b);
+        printf("resiltado: %.2f\n", a - b);
+        break;
+
+         case 3:
+        printf("Digite dois numeros: ");
+        scanf("%f %f", &a, &b);
+        printf("resiltado: %.2f\n", a * b);
+        break;
+
+         case 4:
+        printf("Digite dois numeros: ");
+        scanf("%f %f", &a, &b);
+        if(b != 0)
+        printf("resiltado: %.2f\n", a / b);
+        else 
+        printf("Erro: Divisão por zero!\n");
+        break;
+
+         case 0:
+        printf("Saindo... ");
+        break;
+        default:
+        printf("Opção invalida!\n");
+        break;
+
+    }
+    
+}while(opcao != 0);
+
  
 return 0; 
 
