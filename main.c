@@ -12,18 +12,19 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
- int n, resto, invertido = 0;
- scanf("%d", &n);
+ int n;
+ float nota, soma = 0;
 
- while(n != 0){
-    resto = n % 10;
-    invertido = invertido * 10 + resto;
-    n /= 10;
+ printf("qunatos alunos tem a turma: ");
+ scanf("%d", &n);
+ for(int i = 0; i < n; i++){
+    printf("Digite a nota do aluno %d: \n", i + 1);
+    scanf("%f", &nota);
+    soma += nota;
  }
  
- printf("Numero invertido: %d\n", invertido);
-
-
+  printf("Media da turma: %.2f\n", soma / n);
+ 
 return 0; 
 
 }
