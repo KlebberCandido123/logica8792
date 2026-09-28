@@ -11,14 +11,19 @@
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
+int contador = 0;
+for(int i = 0; i <= 9; i++){
+    for(int j = 0; j <= 9; j++){
+        for(int k = 0; k <= 9; k++){
+            for(int l = 0; l <= 9; l++){
+                contador++;
+                printf("Combinações %d %d %d %d\n", i, j, k, l);
+            }
+        }
 
-for(int i = 1; i < 4; i++){
-    for(int j = 1; j < 4; j++){
-        printf("For externo e for interno: %d %d\n", i, j);
     }
 }
-
-
+printf("ha %d possibilidades de combinações", contador);
 
 return 0; 
 
