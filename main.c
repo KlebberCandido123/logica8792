@@ -11,20 +11,17 @@
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-int contador = 0;
-for(int i = 0; i <= 9; i++){
-    for(int j = 0; j <= 9; j++){
-        for(int k = 0; k <= 9; k++){
-            for(int l = 0; l <= 9; l++){
-                contador++;
-                printf("Combinações %d %d %d %d\n", i, j, k, l);
-            }
-        }
+ int n;
 
+ printf("De que tamanho sera o quadrado: ");
+ scanf("%d", &n);
+    for(int i = 1; i <= n; i++){
+     for(int j = 1;  j <= n; j++){
+        printf("67 ");
+       
+     }
+      printf("\n");
     }
-}
-printf("ha %d possibilidades de combinações", contador);
-
 return 0; 
 
 }
