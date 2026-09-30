@@ -12,7 +12,7 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
  int v[10];
- for(int i = 0; i , 10; i++){
+ for(int i = 0; i  < 10; i++){
     printf("Digite o valor %d: ", i + 1);
     scanf("%d", &v[i]);
  }
