@@ -20,10 +20,20 @@ int soma = 0;
 for(int i = 0; i < n; i++){
     printf("Digite o valor %d: ", i + 1);
     scanf("%d", &v[i]);
-    soma += v[i];
+
 }
-printf("Soma: %d\n", soma);
-printf("Media: %.f\n", (float)soma/n);
+for(int i = 0; i < n; i++){
+    printf("Digite o valor %d: ", i + 1);
+    scanf("%d", &v[i]);
+}
+int maior = v[0], menor = v[0];
+for(int i = 1; i < n; i++){
+    if(v[i] > maior) maior = v[i];
+    if(v[i] < menor) menor = v[i];
+}
+printf("Maior: %d\n", maior);
+printf("Menor: %d\n", menor);
+
 
 
 return 0; 
