@@ -5,8 +5,8 @@
 #include<math.h>
 
 
-char* saudacao(){
-    return "ola, seja bem-vindo";
+char* retornarNome(char nome[]) {
+    return nome;
 }
 
 
@@ -14,7 +14,7 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-printf("%s\n", saudacao());
+printf("o nome e: %s\n", retornarNome("klebber"));
 
 return 0; 
 }
