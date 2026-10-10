@@ -12,15 +12,12 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int numero;
+ int i = 1;
 
-do{
-    printf("Digite um numero maior que 0: ");
-    scanf("%d", &numero);
-}while(numero <= 0);
-
-printf("Voce digitou %d, que e valido\n", numero);
-
+ do{
+    printf("%d\n", i);
+    i++;
+ }while(i <= 5);
 
 
 
