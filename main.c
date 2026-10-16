@@ -23,7 +23,7 @@ printf("--- bem vindo a academia reis ---");
 printf("\n");
 
 printf("qual seu nome ?: ");
-scanf("%s", p1.nome);
+fgets(p1.nome, sizeof(p1.nome), stdin);
 
 printf("digite sua altura: ");
 scanf("%f", &p1.altura);
