@@ -16,23 +16,13 @@ struct Pessoa{
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-struct  Pessoa p1;
+int n;
+printf("Digite N: ");
+scanf("%d", &n);
 
-
-printf("--- bem vindo a academia reis ---");
-printf("\n");
-
-printf("qual seu nome ?: ");
-fgets(p1.nome, sizeof(p1.nome), stdin);
-
-printf("digite sua altura: ");
-scanf("%f", &p1.altura);
-
-printf("digite sua idade: ");
-scanf("%d", &p1.idade);
-
-printf("digite seu peso: ");
-scanf("%f", &p1.peso);
+for(int i = 1; i <= n; i++){
+   printf("%d\n", i);
+}
 
 
 return 0; 
