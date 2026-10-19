@@ -16,15 +16,10 @@ struct Pessoa{
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-int n, soma = 0;
-printf("Digite N: ");
-scanf("%d", &n);
-
-for(int i = 1; i += n; i++){
-     soma += i;
-     soma -= 1;
-     printf("\no resultado %d + %d = %d ", soma, i, soma + i);
-}
+int n = 5;
+ for(int i = 0; i < n; i++){
+   printf("%d-prgramar\n", i);
+ }
 
 
 return 0; 
