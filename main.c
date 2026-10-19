@@ -16,10 +16,14 @@ struct Pessoa{
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-int n = 5;
- for(int i = 0; i < n; i++){
-   printf("%d-prgramar\n", i);
- }
+int contador = 1;
+
+while(contador <= 10){
+   printf("%d\n", contador);
+   contador++;
+}
+
+
 
 
 return 0; 
