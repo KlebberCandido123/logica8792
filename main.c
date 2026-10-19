@@ -16,11 +16,19 @@ struct Pessoa{
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-int portaAberta = 0;
-if(!portaAberta){
-     printf("A porta aberta!\n");
-}
+int idade;
+int temIngresso;
+printf("Digite sua idade: ");
+scanf("%d", &idade);
+printf("Possui ingresso? (1 - sim/ 0 - não)");
+scanf("%d", &temIngresso);
 
+
+if(idade >= 1 && temIngresso){
+   printf("Entranda permitida!\n");
+}else{
+   printf("Entrada não permitida!\n");
+}
 
 
 
