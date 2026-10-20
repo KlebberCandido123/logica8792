@@ -16,16 +16,17 @@ struct Pessoa{
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-int numero, soma = 0;
+int numero, pares = 0;
 printf("Digite um numero (0 para sair): ");
-scanf("%d",&numero);
-
+scanf("%d", &numero);
 while(numero != 0){
-   soma += numero;
+   if(numero % 2 == 0){
+      pares++;
+   }
    printf("Digite um numero (0 para sair): ");
    scanf("%d", &numero);
 }
-printf("Soma: %d\n", soma);
+printf("Quantidade de pares: %d\n", pares);
 
 return 0; 
 }
