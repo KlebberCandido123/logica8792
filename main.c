@@ -16,16 +16,14 @@ struct Pessoa{
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-int n; 
-printf("Digite um valor para n: ");
-scanf("%d", &n);
+int n = 1;
+int soma = 0;
 
-while(n >= 0){
-   printf("%d\n", n);
-   n--;
+while(n <= 100){
+   soma = n + n;
+   printf("%d + %d = %d\n", n, n, soma);
+   n++;
 }
-
-
 
 
 return 0; 
