@@ -17,13 +17,17 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
- int n; 
- do{
-   printf("Digite um numero (não negativo): ");
-   scanf("%d", &n);
- }while(n < 0);
+float nota; 
+do{
+   printf("Digite uma nota (0 a 10): ");
+   scanf("%f", &nota);
+} while(nota < 0 || nota > 10);
+printf("Nota valida: %.1f\n", nota);
 
- printf("Voce digitou: %d\n", n);
+
 
 return 0; 
 }
+ 
+
+
