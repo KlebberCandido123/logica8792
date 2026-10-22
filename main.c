@@ -17,14 +17,13 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int resposta;
+int numero, soma = 0;
 do{
-   printf("Executando o programa...\n");
-   printf("Deseja continuar? (1- sim / 0 - não):");
-   scanf("%d", &resposta);
-}while(resposta == 1);
-printf("Programa encerrado!\n");
-
+   printf("Digite um numero (0 para parar):");
+   scanf("%d", &numero);
+   soma += numero;
+}while(numero != 0);
+printf("Soma: %d\n", soma);
 
 
 return 0; 
