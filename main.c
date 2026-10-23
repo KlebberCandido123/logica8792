@@ -17,25 +17,27 @@ int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int opcao;
-do{
-   printf("\n--- MENU---\n");
-   printf("1 - Dizer olá\n");
-   printf("2 - Dizer tchau\n");
-   printf("0 - Sair\n");
-   printf("Escolha: ");
-   scanf("%d", &opcao);
-   if(opcao == 1){
-      printf("ola\n");
-   }else if(opcao == 2){
-      printf("Tchau!\n");
-   }else if(opcao != 0){
-      printf("Opcao invalida!\n");
-   }
-}while(opcao != 0);
-printf("Ate mais!\n");
-   
+int n;
+ 
+printf("digite 1 para oi\n");
+printf("digite 2 para hello\n");
+printf("digite 3 para bom dia\n");
+scanf("%d", &n);
 
+switch(n){
+   case 1:
+   printf("seu numero é oi ");
+   break;
+   case 2: 
+   printf("seu numero é hello");
+   break;
+   case 3:
+   printf("seu numero é bom dia");
+   break;
+   default:
+   printf("digite um numero valido");
+   break;
+}
 
 
 return 0; 
