@@ -19,24 +19,30 @@ int main(){
 
 int n;
  
-printf("digite 1 para oi\n");
-printf("digite 2 para hello\n");
-printf("digite 3 para bom dia\n");
+printf("digite um numero de 1 a 12");
 scanf("%d", &n);
 
 switch(n){
    case 1:
-   printf("seu numero é oi ");
-   break;
-   case 2: 
-   printf("seu numero é hello");
-   break;
    case 3:
-   printf("seu numero é bom dia");
+   case 5:
+   case 7:
+   case 8:
+   case 10:
+   case 12:
+   printf("o numero de dias é: 31");
+   break;
+   case 4:
+   case 6:
+   case 9:
+   case 11:
+   printf("o numero de dias é: 30");
+   break;
+   case 2:
+   printf("o numero de dias é: 28");
    break;
    default:
    printf("digite um numero valido");
-   break;
 }
 
 
