@@ -4,47 +4,81 @@
 #include<string.h>
 #include<math.h>
 
-
-struct Pessoa{
-   char nome[50];
-   int idade;
-   float altura;
-   float peso;
-};
-
-
+#define QTD 5
+void cadastrar(float notas[]){
+   for(int i = 0; i < QTD; i++){
+      printf("Digite a nota do aluno %d: ", i + 1);
+      scanf("%d", &notas[i]);
+   }
+}
+void mostrar(float notas[]){
+   for(int i = 0; i < QTD; i++){
+      printf("Aluno %d: %.1f\n", i + 1, notas[i]);
+   }
+}
+float calcularMedia(float notas[]){
+   float soma = 0;
+   for(int i = 0; i < QTD; i++){
+      soma += notas[i];
+   }
+   return soma / QTD;
+}
+float maiorNota(float notas[]){
+   float maior = notas[0];
+   for(int i = 0; i < QTD; i++){
+      if(notas[i] > maior){
+         maior = notas[i];
+      }
+   }
+}
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n;
- 
-printf("digite um numero de 1 a 12");
-scanf("%d", &n);
+float notas[QTD];
+int opcao;
+int cadastrado = 0;
 
-switch(n){
-   case 1:
-   case 3:
-   case 5:
-   case 7:
-   case 8:
-   case 10:
-   case 12:
-   printf("o numero de dias é: 31");
-   break;
-   case 4:
-   case 6:
-   case 9:
-   case 11:
-   printf("o numero de dias é: 30");
-   break;
-   case 2:
-   printf("o numero de dias é: 28");
-   break;
-   default:
-   printf("digite um numero valido");
-}
-
+do{
+   printf("\n---- CONTROLE DE NOTAS-----\n");
+   printf("1 - Cadastrar notas\n");
+   printf("2 - Mostrar notas\n");
+   printf("3 - Media da turma\n");
+   printf("4 - maior notas\n");
+   printf("0 - Sair\n");
+   scanf("%d", &opcao);
+   switch (opcao){
+      case 1: 
+      cadastrar(notas);
+      break;
+      case 2:
+      if(cadastrado){
+         mostrar(notas);
+      }else{
+         printf("Nenhuma nota cadastrada a inda.\n");
+      }
+      break;
+      case 3:
+      if(cadastrado){
+         printf("Media da turma: %.2f\n", calcularMedia(notas));
+      }else{
+         printf("Nenhuma nota cadastrada a inda.\n");
+      }
+      break;
+      case 4:
+      if(cadastrado){
+         printf("Maior nota: %.1f\n", maiorNota(notas));
+      }else{
+         printf("Nenhuma nota cadastrada ainda.\n");
+      }
+      break;
+      case 0:
+      printf("Até mais!\n");
+      break;
+      default:
+      printf("Opoção invalida!\n");
+   }
+}while(opcao != 0);
 
 return 0; 
 }
