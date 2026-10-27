@@ -7,29 +7,35 @@
 #include<time.h>
 
 
-void exibirMatriz(int m[][2]){
-   for(int i = 0; i < 2; i++){
-      for(int j = 0; j < 2; j++){
-         printf("%d ", m[i][j]);
-      }
-      printf("\n");
-   }
+int soma(int a,  int b){
+   return a + b;
+
 }
 
-
-
-
+void soma1(){
+   int x, y, resultado;
+   printf("\n Digite um valor para x: ");
+   scanf("%d", &x);
+   printf("\nDigite um valor para y: ");
+   scanf("%d", &y);
+   resultado = x + y;
+   printf("\nA soma de %d + %d = %d", x, y, resultado);
+}
 
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int m[2][2] = {
-   {1, 2},
-   {3, 4},
-};
-exibirMatriz(m);
+
+
+
+int resulatado = soma(5, 5);
+printf("%d", resulatado);
+
+soma1();
+
+
 
 return 0; 
 }
