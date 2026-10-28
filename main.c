@@ -7,14 +7,16 @@
 #include<time.h>
 
 
-void mostrarNumero(int numero){
-   printf("Número: %d\n", numero);
+void somar(int a, int b){
+   printf("Soam = %d\n", a + b);
 }
+
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-mostrarNumero(40);
+
+ somar(5, 2);
 
 
 
