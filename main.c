@@ -6,20 +6,25 @@
 #include<stdlib.h>
 #include<time.h>
 
-int quadrado(int numero){
-   return numero * numero;
+#define PI 8.14159
+float area_circulo(float raio){
+   return PI * raio * raio;
 }
+
+
+
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n;
+float r;
+printf("Raio: ");
+scanf("%f", &r);
+printf("Area: %.2f\n", area_circulo(r));
 
-printf("Digite um numero: ");
-scanf("%d",&n);
 
-printf("%d^2 = %d", n, quadrado(n));
+
 
 return 0; 
 }
