@@ -6,33 +6,27 @@
 #include<stdlib.h>
 #include<time.h>
 
-int buscar(float vetor[], int tamanho, float chave){
-   for(int i = 0; i < tamanho; i++){
-   if(vetor[i] == chave){
-      return i;
-   }
-}
-   return -1;
+float lerPoositivo(char mensagem[]){
+   float valor;
+   do{
+      printf("%s", mensagem);
+      scanf("%f", &valor);
+      if(valor <= 0){
+         printf("Valor invalido digite um numero maior que 0.\n");
+      }
+   }while(valor <= 0);
+   return valor;
 }
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float numeros[] = {10.5, 20.5, 30.5, 40.5, 50.5};
-int tamanho = 5;
-float procurado;
-printf("Digite  o numero que deseja procura: ");
-scanf("%f", &procurado);
-int resultado = buscar(numeros, tamanho, procurado);
-if(resultado != -1){
-   printf("Numero encontrado!\n");
-   printf("Valor: %.2f\n", numeros[resultado]);
-   printf("posição no vetor: %d\n", resultado);
-}else{
-   printf("Numero não encontrado");
-}
-
+float idade = lerPoositivo("Digite a idade: ");
+float peso = lerPoositivo("Digite o peso (kg): ");
+float altura = lerPoositivo("Digite a altura (m): ");
+printf("\nidade: %.0f anos\n", idade);
+printf("IMC: %f\n", peso / (altura * altura));
 
 return 0; 
 }
