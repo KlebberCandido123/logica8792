@@ -6,20 +6,17 @@
 #include<stdlib.h>
 #include<time.h>
 
-int fatorial(int numero){
-   if(numero == 0 || numero == 1){
-      return 1;
+void contador(int numero){
+   for(int i = 0; i <= numero; i++){
+      printf("%d\n", i);
    }
-   return numero * fatorial(numero - 1);
-
 }
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-int resultado = fatorial(5);
-printf("Fatorial: %d\n", resultado);
 
+contador(5);
 
 
 return 0; 
