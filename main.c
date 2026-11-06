@@ -5,18 +5,19 @@
 #include<math.h>
 #include<stdlib.h>
 #include<time.h>
-
-void contador(int numero){
-   for(int i = 0; i <= numero; i++){
-      printf("%d\n", i);
+void contar(int n){
+   if(n == 0){
+      return; //retorna a propria função
    }
+   contar(n - 1);
+   printf("%d\n", n);
 }
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
+contar(5);
 
-contador(5);
 
 
 return 0; 
