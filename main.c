@@ -5,18 +5,20 @@
 #include<math.h>
 #include<stdlib.h>
 #include<time.h>
-void contar(int n){
+
+int somar(int n){
    if(n == 0){
-      return; //retorna a propria função
+      return 0;
    }
-   contar(n - 1);
-   printf("%d\n", n);
+   return n + somar(n - 1);
 }
+
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-contar(5);
+int resultado = somar(5);
+printf("Resultado: %d\n", resultado);
 
 
 
