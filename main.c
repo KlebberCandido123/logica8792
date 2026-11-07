@@ -6,19 +6,19 @@
 #include<stdlib.h>
 #include<time.h>
 
-int potencia(int base, int expoente){
-   if(expoente == 0){
-      return 1;
+int somarDigitos(int numero){
+   if(numero == 0){
+      return 0;
    }
-   return base * potencia(base, expoente - 1);
+   return (numero % 10) + somarDigitos(numero / 10);
+    
 }
+
 
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-
-printf("Resultado: %d\n", potencia(2, 4));
-
+printf("Soma: %d\n", somarDigitos(1234));
 
 return 0; 
 }
