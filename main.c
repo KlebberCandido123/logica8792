@@ -10,16 +10,10 @@
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-
-int n;
-printf("Digite N: ");
-scanf("%d", &n);
-
-for(int i = 1; i <= n; i++){
-   for(int j = 1; j <= n; j++){
-       printf("* ");
+for(int ano = 2000; ano <= 2030; ano++){
+   if(ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
+      printf("%d\n", ano);
    }
-   printf("\n");
 }
 return 0; 
 }
