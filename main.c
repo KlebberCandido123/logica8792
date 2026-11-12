@@ -10,11 +10,14 @@
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-for(int ano = 2000; ano <= 2030; ano++){
-   if(ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
-      printf("%d\n", ano);
+ int total = 0;
+for(int i = 1; i <= 200; i++){
+   if(i % 10 == 3){
+      printf("%d\n", i);
+      total++;
    }
 }
+printf("\nTotal: %d\n", total);
 return 0; 
 }
  
