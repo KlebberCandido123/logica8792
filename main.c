@@ -10,11 +10,21 @@
 int main(){
 
  setlocale(LC_ALL, "pt_BR.UTF-8");
-
-for(int i = 1; i <= 100; i++){
-   if(i % 4 == 0){
-      printf("%d\n", i);
+char palavra[50];
+int tamanho;
+int palindromo = 1;
+printf("Digite uma palavra: ");
+scanf("%49s", palavra);
+tamanho = strlen(palavra);
+for(int i = 0; i < tamanho / 2; i++){
+   if(palavra[i] != palavra[tamanho - 1 - i]){
+      palindromo = 0;
    }
+}
+if(palindromo == 1){
+   printf("A palavra é um palindromo!\n");
+}else{
+   printf("A palavra não é um palindromo!\n");
 }
 return 0; 
 }
