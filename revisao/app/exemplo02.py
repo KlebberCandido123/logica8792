@@ -1,13 +1,19 @@
 try:
-    valor1 = float(input("Digite o primeiro valor: "))
-    valor2 = float(input("Digite o segundo valor: "))
+    while True:
+        try:
+            numero = float(input("Digite um número: "))
+            break
+        except ValueError:
+            print("Valor inválido. Por favor, digite um número válido.")
 
-    media = (valor1 + valor2) / 2
+    while True:
+        try:
+            numero2 = float(input("Digite um número: "))
+            break
+        except ValueError:
+            print("Valor inválido. Por favor, digite um número válido.")
 
-    if media >= 7:
-        print(f"A média entre {valor1} e {valor2} é {media}. Aprovado")
-    else:
-        print(f"A média entre {valor1} e {valor2} é {media}. Reprovado")
-
-except ValueError:
-    print("Foram digitados valores inválidos")
+    media = (numero + numero2) / 2
+    print(f"A média entre {numero} e {numero2} é {media}")
+except KeyboardInterrupt:
+    print("\nPrograma encerrado pelo usuário")
